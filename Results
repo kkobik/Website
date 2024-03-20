@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result</title>
+</head>
+<body>
+
+<script>
+  // Extracting the provider from the URL query parameter
+  var urlParams = new URLSearchParams(window.location.search);
+  var provider = urlParams.get('provider');
+  document.write("<h2>Based off your needs, the best cloud provider will be " + provider + ".</h2>");
+  document.write("<a href='https://azure.microsoft.com'>Visit Microsoft Azure website</a>");
+</script>
+
+</body>
+</html>
