@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Service Provider Recommender</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Which Cloud Service Provider Should I Use?</h2>
+  <p>Type in your needs and requirements here:</p>
+  <input type="text" id="needsInput">
+  <button onclick="recommendProvider()">Submit</button>
+</div>
+
+<script>
+  function recommendProvider() {
+    var needs = document.getElementById("needsInput").value;
+    // Perform analysis of needs and determine the best provider
+    // For simplicity, let's assume Azure is always recommended
+    // You can add more sophisticated logic here
+    var recommendedProvider = "Microsoft Azure";
+    window.location.href = "result.html?provider=" + encodeURIComponent(recommendedProvider);
+  }
+</script>
+
+</body>
+</html>
